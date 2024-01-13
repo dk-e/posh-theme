@@ -54,7 +54,7 @@
         },
         {
           "background": "#424242",
-          "foreground": "#4db9eb",
+          "foreground": "#1eff7c",
           "leading_diamond": " \ue0b6",
           "properties": {
             "fetch_version": false
