@@ -22,7 +22,7 @@
           "foreground": "#99d1db",
           "leading_diamond": " ",
           "properties": {
-            "branch_icon": ""
+            "branch_icon": "\uf418 "
           },
           "style": "diamond",
           "template": "{{ .HEAD }}",
