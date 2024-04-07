@@ -1,0 +1,105 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "background": "",
+          "foreground": "#a6accd",
+          "leading_diamond": " ",
+          "properties": {
+            "style": "folder"
+          },
+          "style": "diamond",
+          "template": "\ue5ff {{ .Path }}",
+          "trailing_diamond": " ",
+          "type": "path"
+        },
+        {
+          "background": "",
+          "foreground": "#add7ff",
+          "leading_diamond": " ",
+          "properties": {
+            "branch_icon": "\uf418 "
+          },
+          "style": "diamond",
+          "template": "{{ .HEAD }}",
+          "trailing_diamond": " ",
+          "type": "git"
+        },
+        {
+          "background": "",
+          "foreground": "#d0679d",
+          "leading_diamond": " ",
+          "properties": {
+            "fetch_version": false
+          },
+          "style": "diamond",
+          "template": "\ue791{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "trailing_diamond": " ",
+          "type": "ruby"
+        },
+        {
+          "background": "",
+          "foreground": "#5de4c7",
+          "leading_diamond": " ",
+          "properties": {
+            "fetch_version": false
+          },
+          "style": "diamond",
+          "template": "\ue718{{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
+          "trailing_diamond": " ",
+          "type": "node"
+        },
+        {
+          "background": "",
+          "foreground": "#add7ff",
+          "leading_diamond": " ",
+          "properties": {
+            "fetch_version": false
+          },
+          "style": "diamond",
+          "template": "\ue624{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "trailing_diamond": " ",
+          "type": "julia"
+        },
+        {
+          "background": "",
+          "foreground": "#add7ff",
+          "foreground_templates": [
+            "{{if eq \"Charging\" .State.String}}#40c4ff{{end}}",
+            "{{if eq \"Discharging\" .State.String}}#ff5722{{end}}",
+            "{{if eq \"Full\" .State.String}}#4caf50{{end}}"
+          ],
+          "leading_diamond": " ",
+          "properties": {
+            "charged_icon": "\u25cf ",
+            "charging_icon": "\u21e1 ",
+            "discharging_icon": "\u21e3 "
+          },
+          "style": "diamond",
+          "template": "{{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}",
+          "trailing_diamond": " ",
+          "type": "battery"
+        }
+      ],
+      "type": "rprompt"
+    },
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "",
+          "foreground": "#add7ff",
+          "style": "diamond",
+          "template": "\u276f",
+          "trailing_diamond": " ",
+          "type": "session"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "version": 2
+}
