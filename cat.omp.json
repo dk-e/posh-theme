@@ -12,33 +12,27 @@
       "alignment": "left",
       "segments": [
         {
-          "type": "session",
+          "foreground": "p:os",
           "style": "plain",
-          "foreground": "p:blue",
-          "template": "{{ .UserName }}@{{ .HostName }} "
+          "template": "{{.Icon}} ",
+          "type": "os"
         },
         {
-          "type": "text",
+          "foreground": "p:blue",
           "style": "plain",
-          "foreground": "p:closer",
-          "template": "\uf105"
-        }
-      ],
-      "type": "prompt"
-    },
-    {
-      "alignment": "right",
-      "segments": [
+          "template": "{{ .UserName }}@{{ .HostName }} ",
+          "type": "session"
+        },
         {
-          "type": "path",
-          "style": "diamond",
           "foreground": "p:pink",
-          "leading_diamond": " ",
-          "trailing_diamond": " ",
-          "template": "\ue5ff {{ .Path }} ",
           "properties": {
-            "style": "folder"
-          }
+            "folder_icon": "..\ue5fe..",
+            "home_icon": "~",
+            "style": "agnoster_short"
+          },
+          "style": "plain",
+          "template": "{{ .Path }} ",
+          "type": "path"
         },
         {
           "foreground": "p:lavender",
@@ -58,18 +52,14 @@
           "style": "plain",
           "type": "git"
         },
-
         {
-          "type": "node",
-          "style": "diamond",
-          "foreground": "#35fa4f",
-          "template": "\ue718{{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
-          "properties": {
-            "fetch_version": false
-          }
+          "style": "plain",
+          "foreground": "p:closer",
+          "template": "\uf105",
+          "type": "text"
         }
       ],
-      "type": "rprompt"
+      "type": "prompt"
     }
   ],
   "final_space": true,
