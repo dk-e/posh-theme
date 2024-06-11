@@ -1,4 +1,3 @@
 # My oh-my-posh theme based on poimandres theme 🎨
 
-
-![image](https://i.zurly.me/file/NRbCM.png)
+![image](https://cdn.zurly.me/file/h3L7x.png)
