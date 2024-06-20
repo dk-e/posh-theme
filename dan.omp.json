@@ -61,7 +61,7 @@
 
         {
           "type": "node",
-          "style": "diamond",
+          "style": "plain",
           "foreground": "#35fa4f",
           "template": "\ue718{{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
           "properties": {
